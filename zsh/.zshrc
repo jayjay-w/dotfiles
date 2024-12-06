@@ -104,3 +104,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+#
+#
+
+export AWS_PROFILE=SystemAdministrator-848416313321
+export REGION=eu-west-1
