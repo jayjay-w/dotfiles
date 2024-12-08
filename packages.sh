@@ -4,6 +4,8 @@ sudo pacman -S unzip rofi-wayland thunar
 
 yay -S google-chrome waybar grimblast-git gpu-screen-recorder hyprpicker matugen-bin python-gpustat hyprsunset-git hypridle-git
 
+yay -S nwg-dock-hyprland nwg-drawer
+
 #sudo systemctl enable power-profiles-daemon
 #sudo systemctl start power-profiles-daemon
 
