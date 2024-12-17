@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  # imports = [ ./hyprpanel.nix ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "jay";
@@ -44,7 +45,7 @@
 	kitty
 	zsh
 	tmux
-	nerdfonts
+	nerd-fonts.jetbrains-mono
 	neovim
 	gnumake
 	libgcc
@@ -57,6 +58,12 @@
   unzip
   neofetch
   fastfetch
+  waybar
+  light
+  pulseaudio
+  rofi
+  wofi
+  dolphin
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
