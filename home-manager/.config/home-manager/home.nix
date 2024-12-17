@@ -17,6 +17,7 @@
   home.enableNixpkgsReleaseCheck = false;
   # The home.packages option allows you to install Nix packages into your
   # environment.
+
   home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
@@ -54,6 +55,8 @@
   zig
   cl
   unzip
+  neofetch
+  fastfetch
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -88,9 +91,25 @@
   #  /etc/profiles/per-user/jay/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    EDITOR = "vim";
+    EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.git = {
+      enable = true;
+      userName = "Jay Joshua";
+      userEmail = "joejoshw@gmail.com";
+    };
+
+  programs.starship = {
+      enable = true;
+      settings = {
+        add_newline = false;
+        aws.disabled = true;
+        gcloud.disabled = true;
+        line_break.disabled = true;
+        };
+    };
 }

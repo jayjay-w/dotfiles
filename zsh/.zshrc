@@ -127,3 +127,4 @@ export REGION=eu-west-1
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export NIXPKGS_ALLOW_UNFREE=1
