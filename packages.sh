@@ -1,6 +1,6 @@
 sudo pacman -S --needed git base-devel
 
-mkddir -p code
+mkdir -p code
 cd code
 
 git clone https://aur.archlinux.org/yay.git
