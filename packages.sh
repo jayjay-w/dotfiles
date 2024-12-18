@@ -11,6 +11,7 @@ sudo pacman -S --needed zdg-user-dirs polybar i3 rofi lsb-release hyprland sway 
 sudo pacman -S bluez bluez-utils btop networkmanager dart-sass wl-clipboard
 sudo pacman -S brightnessctl swww python gnome-bluetooth-3.0 pacman-contrib power-profiles-daemon gvfs
 sudo pacman -S kitty zsh neovim btop unzip rofi-wayland thunar
+sudo pacman -S tmux stow
 
 yay -S google-chrome waybar grimblast-git gpu-screen-recorder hyprpicker matugen-bin python-gpustat hyprsunset-git hypridle-git
 yay -S nerd-fonts slack-desktop aws-cli-v2 visual-studio-code-bin
