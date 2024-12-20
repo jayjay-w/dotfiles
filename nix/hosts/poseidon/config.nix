@@ -184,9 +184,26 @@ in
 
   services = {
     # X11 and desktop manager
-    xserver.enable = true;
-    displayManager.sddm.enable = true;
-    desktopManager.plasma6.enable = true;
+    #displayManager.sddm.enable = true;
+
+    # desktopManager = {
+    #   plasma6 = {
+    #     enable = true;
+    #   };
+    # };
+
+    xserver = {
+      enable = true;
+      displayManager = {
+        gdm.enable = true;
+      };
+
+      desktopManager = {
+        gnome.enable = true;
+        xterm.enable = true;
+        xfce.enable = true;
+      };
+    };
 
     # Keymap
     xserver.xkb = {
