@@ -184,24 +184,26 @@ in
 
   services = {
     # X11 and desktop manager
-    #displayManager.sddm.enable = true;
+    # displayManager.sddm.enable = true;
 
-    # desktopManager = {
-    #   plasma6 = {
-    #     enable = true;
-    #   };
-    # };
+    #desktopManager = {
+    #  plasma6 = {
+    #    enable = true;
+    #  };
+    #};
 
     xserver = {
       enable = true;
       displayManager = {
-        gdm.enable = true;
+       gdm.enable = true;
       };
 
       desktopManager = {
-        gnome.enable = true;
-        xterm.enable = true;
-        xfce.enable = true;
+         #plasma5.enable = true;
+         gnome.enable = true;
+         xterm.enable = true;
+         xfce.enable = true;
+         mate.enable = true;
       };
     };
 
