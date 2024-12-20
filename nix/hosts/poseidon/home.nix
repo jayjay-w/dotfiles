@@ -14,7 +14,7 @@ in
   home.stateVersion = "24.11";
 
   # Import Program Configurations
-  imports = [
+  #imports = [
     # ../../config/emoji.nix
     # ../../config/fastfetch
     # ../../config/hyprland.nix
@@ -26,7 +26,7 @@ in
     # ../../config/waybar.nix
     # ../../config/wlogout.nix
     # ../../config/fastfetch
-  ];
+  #];
 
   # Install & Configure Git
   programs.git = {

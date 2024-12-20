@@ -50,13 +50,6 @@ in
 
   # Extra Module Options
   drivers.amdgpu.enable = true;
-  drivers.nvidia.enable = false;
-  drivers.nvidia-prime = {
-    enable = false;
-    intelBusID = "";
-    nvidiaBusID = "";
-  };
-  drivers.intel.enable = false;
   vm.guest-services.enable = false;
   local.hardware-clock.enable = false;
 
@@ -111,7 +104,6 @@ in
     google-chrome
     kitty
     tmux
-    nerdfonts
     stow
     vscode
     vim
@@ -176,11 +168,12 @@ in
   fonts = {
     packages = with pkgs; [
       noto-fonts-emoji
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
       font-awesome
       # Commenting Symbola out to fix install this will need to be fixed or an alternative found.
       # symbola
       material-icons
+      pkgs.nerd-fonts.jetbrains-mono
     ];
   };
 
@@ -191,7 +184,7 @@ in
 
   services = {
     # X11 and desktop manager
-    services.xserver.enable = true;
+    xserver.enable = true;
     displayManager.sddm.enable = true;
     desktopManager.plasma6.enable = true;
 
@@ -203,8 +196,6 @@ in
 
     # CUPS
     printing.enable = true;
-
-
   };
   
 
@@ -276,5 +267,5 @@ in
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 }

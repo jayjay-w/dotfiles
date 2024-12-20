@@ -2,7 +2,7 @@
   description = "JayOS";
   
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-24.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     stylix.url = "github:danth/stylix";
@@ -18,7 +18,7 @@
     host = "poseidon";
     username = "jay";
   in{
-    nixosConfiguration = {
+    nixosConfigurations = {
       "${host}" = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit system;
@@ -27,7 +27,7 @@
           inherit host;
         };
         modules = [
-          ./hosts/${host}config.nix
+          ./hosts/${host}/config.nix
           inputs.stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
